@@ -30,12 +30,10 @@ def read_file(file_name):
 setup(
     name='mtcnn',
     version='1.0.0',
-    description='Multitask Cascaded Convolutional Networks for face detection and alignment (MTCNN) in Python >= 3.10 and TensorFlow >= 2.12',
+    description='Multitask Cascaded Convolutional Networks for face detection and alignment (MTCNN) in Python >= 3.10 and TensorFlow >= 2.17',
     long_description=read_file('README.md'),
     long_description_content_type='text/markdown',
-    author='Iván de Paz Centeno',
-    author_email='ipazc@unileon.es',
-    url='https://github.com/ipazc/mtcnn',
+    url='https://github.com/tschamp31/mtcnn-self-managed',
     license='MIT',
     packages=find_packages(exclude=['tests', 'docs']),
     install_requires=[
@@ -44,7 +42,7 @@ setup(
     ],
     extras_require={
         'tensorflow': [
-            'tensorflow>=2.12.0'
+            'tensorflow>=2.17.0'
         ],
         'dev': [
             'pytest>=8.3.3',
@@ -59,19 +57,12 @@ setup(
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
     ],
-    python_requires='>=3.10',
+    python_requires='>=3.12',
     include_package_data=True,
     package_data={
         'mtcnn': ['assets/weights/*.lz4'],
-    },
-    project_urls={
-        'Documentation': 'https://github.com/ipazc/mtcnn/docs',
-        'Source': 'https://github.com/ipazc/mtcnn',
-        'Tracker': 'https://github.com/ipazc/mtcnn/issues',
-    },
+    }
 )
